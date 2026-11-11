@@ -36,3 +36,27 @@ By participating in and contributing to our projects and discussions, you acknow
 You can communicate with the MDN Web Docs team and community using the [communication channels][].
 
 [communication channels]: https://developer.mozilla.org/en-US/docs/MDN/Community/Communication_channels
+
+## R56-T002: Responsive layout regression test
+
+This test checks the Cascade Layers example at mobile (360 × 800) and desktop (1280 × 800) viewport sizes.
+
+### Prerequisites
+
+- Node.js
+- Python 3
+- Playwright with Chromium installed
+- Run `npm install` to install dependencies.
+- Run `npx playwright install chromium` if Chromium is not installed.
+
+### Run
+
+From the repository root:
+
+```bash
+node tests/course/r56-t002.mjs
+```
+
+The test starts a temporary local HTTP server, runs the browser checks, saves screenshots and cleans up the browser and server.
+
+Evidence and results are saved in `work/R56-T002/`.
