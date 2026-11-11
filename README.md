@@ -36,3 +36,25 @@ By participating in and contributing to our projects and discussions, you acknow
 You can communicate with the MDN Web Docs team and community using the [communication channels][].
 
 [communication channels]: https://developer.mozilla.org/en-US/docs/MDN/Community/Communication_channels
+## Running the vw-vh keyboard regression test
+
+The keyboard regression test for `learn/sizing/vw-vh.html` uses Playwright
+with Chromium. Run these commands from the repository root.
+
+Requirements: Node.js, Python 3, and Playwright.
+
+Install the test dependency:
+
+    npm install --no-save --package-lock=false playwright@1.65.0
+
+Install Chromium:
+
+    npx playwright install chromium
+
+Run the test:
+
+    node tests/course/r56-t001.mjs
+
+The test starts a temporary local server automatically and checks keyboard
+navigation, visible focus, Reset activation, preview updates, computed layout,
+and unexpected page errors.

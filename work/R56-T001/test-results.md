@@ -2,7 +2,7 @@
 
 ## Test Command
 
-node tests/course/r56-t001.mjs
+`node tests/course/r56-t001.mjs`
 
 ## Environment
 
@@ -26,6 +26,7 @@ node tests/course/r56-t001.mjs
 | Live preview update | PASS |
 | Reset using Space | PASS |
 | Reset using Enter | PASS |
+| No unexpected browser page errors | PASS |
 
 ## Final Output
 
@@ -33,5 +34,4 @@ All R56-T001 checks passed.
 
 ## Conclusion
 
-The automated keyboard regression test completed successfully.
-All eight checks passed.
+The automated keyboard regression test completed successfully. All nine checks passed.

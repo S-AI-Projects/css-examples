@@ -67,6 +67,11 @@ try {
     viewport: { width: 1280, height: 800 },
   });
   const page = await context.newPage();
+  const pageErrors = [];
+
+page.on("pageerror", (error) => {
+  pageErrors.push(error.message);
+});
 
   await page.goto(url, { waitUntil: "load" });
 
@@ -202,6 +207,12 @@ console.log("PASS: all three controls show visible keyboard focus.");
   console.log("PASS: Enter activates Reset.");
 
   await context.close();
+  assert.deepEqual(
+  pageErrors,
+  [],
+  `Unexpected page errors: ${pageErrors.join("\n")}`
+);
+console.log("PASS: no unexpected page errors.");
   console.log("\nAll R56-T001 checks passed.");
 } catch (error) {
   console.error("\nR56-T001 test failed:");
