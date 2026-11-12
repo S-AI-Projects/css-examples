@@ -73,6 +73,35 @@
         column-span: all;
       }
     </style>
+
+    <style>
+      .text-example {
+        width: 90%;
+        max-width: 700px;
+        margin-top: 24px;
+      }
+
+      .text-example label {
+        display: block;
+        margin-bottom: 8px;
+      }
+
+      .text-example-container {
+        column-width: 200px;
+        border: 1px solid #4d4e53;
+        padding: 10px;
+        margin-top: 10px;
+      }
+
+      .text-example-container h2 {
+        column-span: all;
+      }
+
+      #plain-text-preview {
+        white-space: pre-wrap;
+        overflow-wrap: anywhere;
+      }
+    </style>
   </head>
 
   <body>
@@ -122,6 +151,16 @@ h2 {
     <div class="playable-buttons">
       <input id="reset" type="button" value="Reset" />
     </div>
+
+    <section class="text-example">
+      <label for="plain-text-input">Enter ordinary text:</label>
+      <textarea id="plain-text-input" rows="4">Type your text here.</textarea>
+
+      <div class="text-example-container">
+        <h2>Text preview</h2>
+        <p id="plain-text-preview" aria-live="polite"></p>
+      </div>
+    </section>
   </body>
   <script>
     var section = document.querySelector("section");
@@ -146,5 +185,15 @@ h2 {
     textareaHTML.addEventListener("input", fillCode);
     textareaCSS.addEventListener("input", fillCode);
     window.addEventListener("load", fillCode);
+
+    var plainTextInput = document.getElementById("plain-text-input");
+    var plainTextPreview = document.getElementById("plain-text-preview");
+
+    function updatePlainTextPreview() {
+      plainTextPreview.textContent = plainTextInput.value;
+    }
+
+    plainTextInput.addEventListener("input", updatePlainTextPreview);
+    updatePlainTextPreview();
   </script>
 </html>
