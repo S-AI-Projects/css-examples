@@ -58,6 +58,9 @@
         display: block;
         margin: 5px;
       }
+      .no-flexbox .box {
+        display: block;
+      }
 
       .box {
         width: 500px;
@@ -81,6 +84,7 @@
   </head>
 
   <body>
+    <p id="feature-status" role="status" hidden></p>
     <section>
       <div class="box">
         <div></div>
@@ -113,6 +117,21 @@
     var textareaHTML = document.querySelector(".playable-html");
     var textareaCSS = document.querySelector(".playable-css");
     var reset = document.getElementById("reset");
+    var featureStatus = document.getElementById("feature-status");
+
+var supportsFlexbox =
+  window.CSS &&
+  typeof window.CSS.supports === "function" &&
+  window.CSS.supports("display", "flex") &&
+  window.CSS.supports("align-items", "center") &&
+  window.CSS.supports("justify-content", "center");
+
+if (!supportsFlexbox) {
+  document.documentElement.classList.add("no-flexbox");
+  featureStatus.hidden = false;
+  featureStatus.textContent =
+    "Your browser does not support the Flexbox alignment features used in this example. The preview will use normal block layout instead.";
+}
     var htmlCode = textareaHTML.value;
     var cssCode = textareaCSS.value;
 
