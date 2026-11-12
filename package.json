@@ -1,0 +1,28 @@
+{
+  "name": "css-examples",
+  "version": "1.0.0",
+  "description": "Code examples that accompany various MDN CSS documentation pages.",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "devDependencies": {
+    "playwright": "^1.65.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:r56-t004": "node tests/course/r56-t004.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tushar153588/css-examples.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Tushar153588/css-examples/issues"
+  },
+  "homepage": "https://github.com/Tushar153588/css-examples#readme"
+}
