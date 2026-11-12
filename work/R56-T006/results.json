@@ -1,0 +1,15 @@
+{
+  "task": "R56-T006",
+  "page": "/flexbox/alignment/intro.html",
+  "nodeVersion": "v24.19.0",
+  "playwrightVersion": "1.65.0",
+  "chromiumVersion": "158.0.8127.18",
+  "scenarios": {
+    "supported": "PASSED",
+    "unsupported": "PASSED",
+    "htmlEditing": "PASSED",
+    "reset": "PASSED",
+    "browserErrors": "NONE"
+  },
+  "note": "Unsupported behavior was simulated by stubbing CSS.supports. It was not tested on a physically unsupported browser."
+}

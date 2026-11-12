@@ -26,9 +26,11 @@ The "tools" directory contains various tools for working with CSS, including a [
 ## Contribute to MDN Web Docs
 
 You can contribute to MDN Web Docs and be a part of our community through content contributions, engineering, or translation work.
+
 The MDN Web Docs project welcomes contributions from everyone who shares our goals and wants to contribute constructively and respectfully within our community.
 
 To find out how to get started, see the [CONTRIBUTING.md](CONTRIBUTING.md) document in this repository.
+
 By participating in and contributing to our projects and discussions, you acknowledge that you have read and agree to our [Code of Conduct](CODE_OF_CONDUCT.md).
 
 ## Get in touch
@@ -36,3 +38,42 @@ By participating in and contributing to our projects and discussions, you acknow
 You can communicate with the MDN Web Docs team and community using the [communication channels][].
 
 [communication channels]: https://developer.mozilla.org/en-US/docs/MDN/Community/Communication_channels
+
+---
+
+## R56-T006 — Flexbox Alignment Feature Support
+
+**Page:** `flexbox/alignment/intro.html`
+
+This task adds feature detection for the Flexbox alignment properties used in the example.
+
+- Supported browsers continue to use Flexbox alignment.
+- Unsupported browsers receive a clear warning and a normal block-layout fallback.
+- The HTML editor and Reset button continue to work.
+
+### Run the test
+
+Install dependencies:
+
+```bash
+npm install
+npx playwright install chromium
+```
+
+Run:
+
+```bash
+npm run test:r56-t006
+```
+
+### Test coverage
+
+- Flexbox-supported browser behavior
+- Simulated unsupported browser behavior
+- Fallback warning and layout
+- HTML editing and Reset functionality
+- Unexpected browser JavaScript errors
+
+**Evidence:** `work/R56-T006/`
+
+**Note:** The unsupported scenario is simulated by overriding `CSS.supports`; it is not a test on a physically unsupported browser.

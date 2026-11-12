@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "test:r56-t006": "node tests/course/r56-t006.mjs"
+  },
+  "devDependencies": {
+    "playwright": "1.65.0"
+  }
+}
