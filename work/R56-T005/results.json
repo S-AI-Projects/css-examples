@@ -1,0 +1,1170 @@
+{
+  "task": "R56-T005",
+  "viewport": {
+    "width": 1280,
+    "height": 800
+  },
+  "fontFixture": "Arial, sans-serif",
+  "imageFixture": "tests/course/fixtures/blueprint.svg",
+  "contexts": [
+    {
+      "itemCount": 30,
+      "initialValue": "cyclic",
+      "initialClass": "demo-cyclic",
+      "initialCode": "@counter-style blacknwhite {\n  system: cyclic;\n  symbols: ◆ ◇;\n  suffix: \" \";\n}\n\nul {\n  list-style: blacknwhite;\n}",
+      "options": [
+        "cyclic",
+        "fixed",
+        "symbolic",
+        "alphabetic",
+        "numeric",
+        "additive",
+        "extends",
+        "decimal",
+        "decimal-leading-zero",
+        "arabic-indic",
+        "armenian",
+        "upper-armenian",
+        "lower-armenian",
+        "bengali",
+        "cambodian",
+        "khmer",
+        "cjk-decimal",
+        "devanagari",
+        "georgian",
+        "gujarati",
+        "gurmukhi",
+        "hebrew",
+        "kannada",
+        "lao",
+        "malayalam",
+        "mongolian",
+        "myanmar",
+        "oriya",
+        "persian",
+        "lower-roman",
+        "upper-roman",
+        "telugu",
+        "thai",
+        "tibetan",
+        "lower-alpha",
+        "upper-alpha",
+        "lower-alpha",
+        "lower-latin",
+        "upper-alpha",
+        "upper-latin",
+        "cjk-earthly-branch",
+        "cjk-heavenly-stem",
+        "lower-greek",
+        "hiragana",
+        "hiragana-iroha",
+        "katakana",
+        "katakana-iroha",
+        "disc",
+        "circle",
+        "square",
+        "disclosure-open",
+        "disclosure-closed",
+        "japanese-informal",
+        "japanese-formal",
+        "korean-hangul-formal",
+        "korean-hanja-informal",
+        "korean-hanja-formal",
+        "simp-chinese-informal",
+        "simp-chinese-formal",
+        "trad-chinese-informal",
+        "trad-chinese-formal",
+        "cjk-ideographic",
+        "ethiopic-numeric"
+      ]
+    },
+    {
+      "itemCount": 30,
+      "initialValue": "cyclic",
+      "initialClass": "demo-cyclic",
+      "initialCode": "@counter-style blacknwhite {\n  system: cyclic;\n  symbols: ◆ ◇;\n  suffix: \" \";\n}\n\nul {\n  list-style: blacknwhite;\n}",
+      "options": [
+        "cyclic",
+        "fixed",
+        "symbolic",
+        "alphabetic",
+        "numeric",
+        "additive",
+        "extends",
+        "decimal",
+        "decimal-leading-zero",
+        "arabic-indic",
+        "armenian",
+        "upper-armenian",
+        "lower-armenian",
+        "bengali",
+        "cambodian",
+        "khmer",
+        "cjk-decimal",
+        "devanagari",
+        "georgian",
+        "gujarati",
+        "gurmukhi",
+        "hebrew",
+        "kannada",
+        "lao",
+        "malayalam",
+        "mongolian",
+        "myanmar",
+        "oriya",
+        "persian",
+        "lower-roman",
+        "upper-roman",
+        "telugu",
+        "thai",
+        "tibetan",
+        "lower-alpha",
+        "upper-alpha",
+        "lower-alpha",
+        "lower-latin",
+        "upper-alpha",
+        "upper-latin",
+        "cjk-earthly-branch",
+        "cjk-heavenly-stem",
+        "lower-greek",
+        "hiragana",
+        "hiragana-iroha",
+        "katakana",
+        "katakana-iroha",
+        "disc",
+        "circle",
+        "square",
+        "disclosure-open",
+        "disclosure-closed",
+        "japanese-informal",
+        "japanese-formal",
+        "korean-hangul-formal",
+        "korean-hanja-informal",
+        "korean-hanja-formal",
+        "simp-chinese-informal",
+        "simp-chinese-formal",
+        "trad-chinese-informal",
+        "trad-chinese-formal",
+        "cjk-ideographic",
+        "ethiopic-numeric"
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "context": 1,
+      "option": "cyclic",
+      "expectedClass": "demo-cyclic",
+      "actualClass": "demo-cyclic",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 1,
+      "option": "fixed",
+      "expectedClass": "demo-fixed",
+      "actualClass": "demo-fixed",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 1,
+      "option": "symbolic",
+      "expectedClass": "demo-symbolic",
+      "actualClass": "demo-symbolic",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 1,
+      "option": "alphabetic",
+      "expectedClass": "demo-alphabetic",
+      "actualClass": "demo-alphabetic",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 1,
+      "option": "numeric",
+      "expectedClass": "demo-numeric",
+      "actualClass": "demo-numeric",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 1,
+      "option": "additive",
+      "expectedClass": "demo-additive",
+      "actualClass": "demo-additive",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 1,
+      "option": "extends",
+      "expectedClass": "demo-extends",
+      "actualClass": "demo-extends",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 1,
+      "option": "decimal",
+      "expectedClass": "demo-decimal",
+      "actualClass": "demo-decimal",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 1,
+      "option": "decimal-leading-zero",
+      "expectedClass": "demo-decimal-leading-zero",
+      "actualClass": "demo-decimal-leading-zero",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 1,
+      "option": "arabic-indic",
+      "expectedClass": "demo-arabic-indic",
+      "actualClass": "demo-arabic-indic",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 1,
+      "option": "armenian",
+      "expectedClass": "demo-armenian",
+      "actualClass": "demo-armenian",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 1,
+      "option": "upper-armenian",
+      "expectedClass": "demo-upper-armenian",
+      "actualClass": "demo-upper-armenian",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 1,
+      "option": "lower-armenian",
+      "expectedClass": "demo-lower-armenian",
+      "actualClass": "demo-lower-armenian",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 1,
+      "option": "bengali",
+      "expectedClass": "demo-bengali",
+      "actualClass": "demo-bengali",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 1,
+      "option": "cambodian",
+      "expectedClass": "demo-cambodian",
+      "actualClass": "demo-cambodian",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 1,
+      "option": "khmer",
+      "expectedClass": "demo-khmer",
+      "actualClass": "demo-khmer",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 1,
+      "option": "cjk-decimal",
+      "expectedClass": "demo-cjk-decimal",
+      "actualClass": "demo-cjk-decimal",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 1,
+      "option": "devanagari",
+      "expectedClass": "demo-devanagari",
+      "actualClass": "demo-devanagari",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 1,
+      "option": "georgian",
+      "expectedClass": "demo-georgian",
+      "actualClass": "demo-georgian",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 1,
+      "option": "gujarati",
+      "expectedClass": "demo-gujarati",
+      "actualClass": "demo-gujarati",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 1,
+      "option": "gurmukhi",
+      "expectedClass": "demo-gurmukhi",
+      "actualClass": "demo-gurmukhi",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 1,
+      "option": "hebrew",
+      "expectedClass": "demo-hebrew",
+      "actualClass": "demo-hebrew",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 1,
+      "option": "kannada",
+      "expectedClass": "demo-kannada",
+      "actualClass": "demo-kannada",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 1,
+      "option": "lao",
+      "expectedClass": "demo-lao",
+      "actualClass": "demo-lao",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 1,
+      "option": "malayalam",
+      "expectedClass": "demo-malayalam",
+      "actualClass": "demo-malayalam",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 1,
+      "option": "mongolian",
+      "expectedClass": "demo-mongolian",
+      "actualClass": "demo-mongolian",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 1,
+      "option": "myanmar",
+      "expectedClass": "demo-myanmar",
+      "actualClass": "demo-myanmar",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 1,
+      "option": "oriya",
+      "expectedClass": "demo-oriya",
+      "actualClass": "demo-oriya",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 1,
+      "option": "persian",
+      "expectedClass": "demo-persian",
+      "actualClass": "demo-persian",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 1,
+      "option": "lower-roman",
+      "expectedClass": "demo-lower-roman",
+      "actualClass": "demo-lower-roman",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 1,
+      "option": "upper-roman",
+      "expectedClass": "demo-upper-roman",
+      "actualClass": "demo-upper-roman",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 1,
+      "option": "telugu",
+      "expectedClass": "demo-telugu",
+      "actualClass": "demo-telugu",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 1,
+      "option": "thai",
+      "expectedClass": "demo-thai",
+      "actualClass": "demo-thai",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 1,
+      "option": "tibetan",
+      "expectedClass": "demo-tibetan",
+      "actualClass": "demo-tibetan",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 1,
+      "option": "lower-alpha",
+      "expectedClass": "demo-lower-alpha",
+      "actualClass": "demo-lower-alpha",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 1,
+      "option": "upper-alpha",
+      "expectedClass": "demo-upper-alpha",
+      "actualClass": "demo-upper-alpha",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 1,
+      "option": "lower-alpha",
+      "expectedClass": "demo-lower-alpha",
+      "actualClass": "demo-lower-alpha",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 1,
+      "option": "lower-latin",
+      "expectedClass": "demo-lower-latin",
+      "actualClass": "demo-lower-latin",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 1,
+      "option": "upper-alpha",
+      "expectedClass": "demo-upper-alpha",
+      "actualClass": "demo-upper-alpha",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 1,
+      "option": "upper-latin",
+      "expectedClass": "demo-upper-latin",
+      "actualClass": "demo-upper-latin",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 1,
+      "option": "cjk-earthly-branch",
+      "expectedClass": "demo-cjk-earthly-branch",
+      "actualClass": "demo-cjk-earthly-branch",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 1,
+      "option": "cjk-heavenly-stem",
+      "expectedClass": "demo-cjk-heavenly-stem",
+      "actualClass": "demo-cjk-heavenly-stem",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 1,
+      "option": "lower-greek",
+      "expectedClass": "demo-lower-greek",
+      "actualClass": "demo-lower-greek",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 1,
+      "option": "hiragana",
+      "expectedClass": "demo-hiragana",
+      "actualClass": "demo-hiragana",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 1,
+      "option": "hiragana-iroha",
+      "expectedClass": "demo-hiragana-iroha",
+      "actualClass": "demo-hiragana-iroha",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 1,
+      "option": "katakana",
+      "expectedClass": "demo-katakana",
+      "actualClass": "demo-katakana",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 1,
+      "option": "katakana-iroha",
+      "expectedClass": "demo-katakana-iroha",
+      "actualClass": "demo-katakana-iroha",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 1,
+      "option": "disc",
+      "expectedClass": "demo-disc",
+      "actualClass": "demo-disc",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 1,
+      "option": "circle",
+      "expectedClass": "demo-circle",
+      "actualClass": "demo-circle",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 1,
+      "option": "square",
+      "expectedClass": "demo-square",
+      "actualClass": "demo-square",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 1,
+      "option": "disclosure-open",
+      "expectedClass": "demo-disclosure-open",
+      "actualClass": "demo-disclosure-open",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 1,
+      "option": "disclosure-closed",
+      "expectedClass": "demo-disclosure-closed",
+      "actualClass": "demo-disclosure-closed",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 1,
+      "option": "japanese-informal",
+      "expectedClass": "demo-japanese-informal",
+      "actualClass": "demo-japanese-informal",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 1,
+      "option": "japanese-formal",
+      "expectedClass": "demo-japanese-formal",
+      "actualClass": "demo-japanese-formal",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 1,
+      "option": "korean-hangul-formal",
+      "expectedClass": "demo-korean-hangul-formal",
+      "actualClass": "demo-korean-hangul-formal",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 1,
+      "option": "korean-hanja-informal",
+      "expectedClass": "demo-korean-hanja-informal",
+      "actualClass": "demo-korean-hanja-informal",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 1,
+      "option": "korean-hanja-formal",
+      "expectedClass": "demo-korean-hanja-formal",
+      "actualClass": "demo-korean-hanja-formal",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 1,
+      "option": "simp-chinese-informal",
+      "expectedClass": "demo-simp-chinese-informal",
+      "actualClass": "demo-simp-chinese-informal",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 1,
+      "option": "simp-chinese-formal",
+      "expectedClass": "demo-simp-chinese-formal",
+      "actualClass": "demo-simp-chinese-formal",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 1,
+      "option": "trad-chinese-informal",
+      "expectedClass": "demo-trad-chinese-informal",
+      "actualClass": "demo-trad-chinese-informal",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 1,
+      "option": "trad-chinese-formal",
+      "expectedClass": "demo-trad-chinese-formal",
+      "actualClass": "demo-trad-chinese-formal",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 1,
+      "option": "cjk-ideographic",
+      "expectedClass": "demo-cjk-ideographic",
+      "actualClass": "demo-cjk-ideographic",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 1,
+      "option": "ethiopic-numeric",
+      "expectedClass": "demo-ethiopic-numeric",
+      "actualClass": "demo-ethiopic-numeric",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 2,
+      "option": "cyclic",
+      "expectedClass": "demo-cyclic",
+      "actualClass": "demo-cyclic",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 2,
+      "option": "fixed",
+      "expectedClass": "demo-fixed",
+      "actualClass": "demo-fixed",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 2,
+      "option": "symbolic",
+      "expectedClass": "demo-symbolic",
+      "actualClass": "demo-symbolic",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 2,
+      "option": "alphabetic",
+      "expectedClass": "demo-alphabetic",
+      "actualClass": "demo-alphabetic",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 2,
+      "option": "numeric",
+      "expectedClass": "demo-numeric",
+      "actualClass": "demo-numeric",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 2,
+      "option": "additive",
+      "expectedClass": "demo-additive",
+      "actualClass": "demo-additive",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 2,
+      "option": "extends",
+      "expectedClass": "demo-extends",
+      "actualClass": "demo-extends",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 2,
+      "option": "decimal",
+      "expectedClass": "demo-decimal",
+      "actualClass": "demo-decimal",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 2,
+      "option": "decimal-leading-zero",
+      "expectedClass": "demo-decimal-leading-zero",
+      "actualClass": "demo-decimal-leading-zero",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 2,
+      "option": "arabic-indic",
+      "expectedClass": "demo-arabic-indic",
+      "actualClass": "demo-arabic-indic",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 2,
+      "option": "armenian",
+      "expectedClass": "demo-armenian",
+      "actualClass": "demo-armenian",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 2,
+      "option": "upper-armenian",
+      "expectedClass": "demo-upper-armenian",
+      "actualClass": "demo-upper-armenian",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 2,
+      "option": "lower-armenian",
+      "expectedClass": "demo-lower-armenian",
+      "actualClass": "demo-lower-armenian",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 2,
+      "option": "bengali",
+      "expectedClass": "demo-bengali",
+      "actualClass": "demo-bengali",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 2,
+      "option": "cambodian",
+      "expectedClass": "demo-cambodian",
+      "actualClass": "demo-cambodian",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 2,
+      "option": "khmer",
+      "expectedClass": "demo-khmer",
+      "actualClass": "demo-khmer",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 2,
+      "option": "cjk-decimal",
+      "expectedClass": "demo-cjk-decimal",
+      "actualClass": "demo-cjk-decimal",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 2,
+      "option": "devanagari",
+      "expectedClass": "demo-devanagari",
+      "actualClass": "demo-devanagari",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 2,
+      "option": "georgian",
+      "expectedClass": "demo-georgian",
+      "actualClass": "demo-georgian",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 2,
+      "option": "gujarati",
+      "expectedClass": "demo-gujarati",
+      "actualClass": "demo-gujarati",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 2,
+      "option": "gurmukhi",
+      "expectedClass": "demo-gurmukhi",
+      "actualClass": "demo-gurmukhi",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 2,
+      "option": "hebrew",
+      "expectedClass": "demo-hebrew",
+      "actualClass": "demo-hebrew",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 2,
+      "option": "kannada",
+      "expectedClass": "demo-kannada",
+      "actualClass": "demo-kannada",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 2,
+      "option": "lao",
+      "expectedClass": "demo-lao",
+      "actualClass": "demo-lao",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 2,
+      "option": "malayalam",
+      "expectedClass": "demo-malayalam",
+      "actualClass": "demo-malayalam",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 2,
+      "option": "mongolian",
+      "expectedClass": "demo-mongolian",
+      "actualClass": "demo-mongolian",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 2,
+      "option": "myanmar",
+      "expectedClass": "demo-myanmar",
+      "actualClass": "demo-myanmar",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 2,
+      "option": "oriya",
+      "expectedClass": "demo-oriya",
+      "actualClass": "demo-oriya",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 2,
+      "option": "persian",
+      "expectedClass": "demo-persian",
+      "actualClass": "demo-persian",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 2,
+      "option": "lower-roman",
+      "expectedClass": "demo-lower-roman",
+      "actualClass": "demo-lower-roman",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 2,
+      "option": "upper-roman",
+      "expectedClass": "demo-upper-roman",
+      "actualClass": "demo-upper-roman",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 2,
+      "option": "telugu",
+      "expectedClass": "demo-telugu",
+      "actualClass": "demo-telugu",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 2,
+      "option": "thai",
+      "expectedClass": "demo-thai",
+      "actualClass": "demo-thai",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 2,
+      "option": "tibetan",
+      "expectedClass": "demo-tibetan",
+      "actualClass": "demo-tibetan",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 2,
+      "option": "lower-alpha",
+      "expectedClass": "demo-lower-alpha",
+      "actualClass": "demo-lower-alpha",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 2,
+      "option": "upper-alpha",
+      "expectedClass": "demo-upper-alpha",
+      "actualClass": "demo-upper-alpha",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 2,
+      "option": "lower-alpha",
+      "expectedClass": "demo-lower-alpha",
+      "actualClass": "demo-lower-alpha",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 2,
+      "option": "lower-latin",
+      "expectedClass": "demo-lower-latin",
+      "actualClass": "demo-lower-latin",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 2,
+      "option": "upper-alpha",
+      "expectedClass": "demo-upper-alpha",
+      "actualClass": "demo-upper-alpha",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 2,
+      "option": "upper-latin",
+      "expectedClass": "demo-upper-latin",
+      "actualClass": "demo-upper-latin",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 2,
+      "option": "cjk-earthly-branch",
+      "expectedClass": "demo-cjk-earthly-branch",
+      "actualClass": "demo-cjk-earthly-branch",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 2,
+      "option": "cjk-heavenly-stem",
+      "expectedClass": "demo-cjk-heavenly-stem",
+      "actualClass": "demo-cjk-heavenly-stem",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 2,
+      "option": "lower-greek",
+      "expectedClass": "demo-lower-greek",
+      "actualClass": "demo-lower-greek",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 2,
+      "option": "hiragana",
+      "expectedClass": "demo-hiragana",
+      "actualClass": "demo-hiragana",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 2,
+      "option": "hiragana-iroha",
+      "expectedClass": "demo-hiragana-iroha",
+      "actualClass": "demo-hiragana-iroha",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 2,
+      "option": "katakana",
+      "expectedClass": "demo-katakana",
+      "actualClass": "demo-katakana",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 2,
+      "option": "katakana-iroha",
+      "expectedClass": "demo-katakana-iroha",
+      "actualClass": "demo-katakana-iroha",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 2,
+      "option": "disc",
+      "expectedClass": "demo-disc",
+      "actualClass": "demo-disc",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 2,
+      "option": "circle",
+      "expectedClass": "demo-circle",
+      "actualClass": "demo-circle",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 2,
+      "option": "square",
+      "expectedClass": "demo-square",
+      "actualClass": "demo-square",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 2,
+      "option": "disclosure-open",
+      "expectedClass": "demo-disclosure-open",
+      "actualClass": "demo-disclosure-open",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 2,
+      "option": "disclosure-closed",
+      "expectedClass": "demo-disclosure-closed",
+      "actualClass": "demo-disclosure-closed",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 2,
+      "option": "japanese-informal",
+      "expectedClass": "demo-japanese-informal",
+      "actualClass": "demo-japanese-informal",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 2,
+      "option": "japanese-formal",
+      "expectedClass": "demo-japanese-formal",
+      "actualClass": "demo-japanese-formal",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 2,
+      "option": "korean-hangul-formal",
+      "expectedClass": "demo-korean-hangul-formal",
+      "actualClass": "demo-korean-hangul-formal",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 2,
+      "option": "korean-hanja-informal",
+      "expectedClass": "demo-korean-hanja-informal",
+      "actualClass": "demo-korean-hanja-informal",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 2,
+      "option": "korean-hanja-formal",
+      "expectedClass": "demo-korean-hanja-formal",
+      "actualClass": "demo-korean-hanja-formal",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 2,
+      "option": "simp-chinese-informal",
+      "expectedClass": "demo-simp-chinese-informal",
+      "actualClass": "demo-simp-chinese-informal",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 2,
+      "option": "simp-chinese-formal",
+      "expectedClass": "demo-simp-chinese-formal",
+      "actualClass": "demo-simp-chinese-formal",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 2,
+      "option": "trad-chinese-informal",
+      "expectedClass": "demo-trad-chinese-informal",
+      "actualClass": "demo-trad-chinese-informal",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 2,
+      "option": "trad-chinese-formal",
+      "expectedClass": "demo-trad-chinese-formal",
+      "actualClass": "demo-trad-chinese-formal",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 2,
+      "option": "cjk-ideographic",
+      "expectedClass": "demo-cjk-ideographic",
+      "actualClass": "demo-cjk-ideographic",
+      "codeIsNotEmpty": true,
+      "passed": true
+    },
+    {
+      "context": 2,
+      "option": "ethiopic-numeric",
+      "expectedClass": "demo-ethiopic-numeric",
+      "actualClass": "demo-ethiopic-numeric",
+      "codeIsNotEmpty": true,
+      "passed": true
+    }
+  ],
+  "versions": {
+    "node": "v24.19.0",
+    "playwright": "1.65.0",
+    "chromium": "158.0.8127.18"
+  },
+  "imageFixtureRequests": 2,
+  "result": "PASS"
+}
