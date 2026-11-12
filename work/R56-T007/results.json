@@ -1,0 +1,37 @@
+{
+  "task": "R56-T007",
+  "page": "/tools/box-shadow-generator/",
+  "nodeVersion": "v24.19.0",
+  "playwrightVersion": "1.65.0",
+  "scenarios": {
+    "baselineLayout": "PASSED",
+    "addLayer": "PASSED",
+    "generatedCSSAndPreview": "PASSED",
+    "browserErrors": "NONE"
+  },
+  "browserErrors": [],
+  "server": "READY",
+  "chromiumVersion": "158.0.8127.18",
+  "baseline": {
+    "title": "Box-shadow generator",
+    "containerWidth": 1000,
+    "previewWidth": 302,
+    "previewHeight": 102,
+    "initialLayerCount": 0,
+    "initialBoxShadow": "none",
+    "outputExists": true
+  },
+  "layerCreated": {
+    "text": "shadow 0",
+    "type": "layer",
+    "active": "layer"
+  },
+  "generatedCSS": {
+    "computedBoxShadow": "rgb(229, 195, 144) 5px -5px 5px 0px",
+    "inlineBoxShadow": "rgb(229, 195, 144) 5px -5px 5px 0px",
+    "outputValue": "5px -5px 5px 0px #E5C390;",
+    "outputRowDisplay": "block",
+    "layerCount": 1
+  },
+  "status": "ALL CHECKS PASSED"
+}
