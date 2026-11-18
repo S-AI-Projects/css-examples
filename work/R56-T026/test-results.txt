@@ -1,0 +1,2 @@
+$ node tests/course/r56-t026.mjs
+R56-T026 span-flex walkthrough regression passed successfully.
