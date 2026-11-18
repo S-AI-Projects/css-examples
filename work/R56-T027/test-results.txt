@@ -1,0 +1,2 @@
+$ node tests/course/r56-t027.mjs
+R56-T027 safe text rendering regression passed successfully.

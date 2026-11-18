@@ -53,6 +53,34 @@
         grid-column: 2;
         grid-row: 1;
       }
+
+      .text-companion {
+        width: 90%;
+        max-width: 700px;
+        margin-top: 20px;
+        padding: 10px;
+        border: 1px solid #4d4e53;
+        border-radius: 4px;
+      }
+
+      .text-companion label {
+        display: block;
+        margin-bottom: 6px;
+        font-weight: bold;
+      }
+
+      #safe-text-input {
+        width: 100%;
+        padding: 6px;
+        margin-bottom: 10px;
+      }
+
+      .safe-text-preview {
+        padding: 8px;
+        background-color: #f8f9fa;
+        border: 1px dashed #ced4da;
+        white-space: pre-wrap;
+      }
     </style>
   </head>
 
@@ -107,6 +135,24 @@
     <div class="playable-buttons">
       <input id="reset" type="button" value="Reset" />
     </div>
+
+    <section class="text-companion">
+      <label for="safe-text-input">Safe subgrid text label:</label>
+      <input id="safe-text-input" type="text" value="Subgrid Label" />
+      <div class="safe-text-preview" aria-live="polite"></div>
+    </section>
   </body>
   <script src="../playable.js"></script>
+  <script>
+    var safeTextInput = document.getElementById("safe-text-input");
+    var safeTextPreview = document.querySelector(".safe-text-preview");
+
+    if (safeTextInput && safeTextPreview) {
+      function updateSafeText() {
+        safeTextPreview.textContent = safeTextInput.value;
+      }
+      safeTextInput.addEventListener("input", updateSafeText);
+      updateSafeText();
+    }
+  </script>
 </html>
