@@ -1,0 +1,2 @@
+$ node tests/course/r56-t028.mjs
+R56-T028 motion and focus preferences regression passed successfully.
