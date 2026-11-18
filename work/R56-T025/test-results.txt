@@ -1,0 +1,2 @@
+$ node tests/course/r56-t025.mjs
+R56-T025 font feature fallback regression passed successfully.

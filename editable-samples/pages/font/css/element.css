@@ -6,3 +6,16 @@
   display: block;
   color: #c13832;
 }
+
+.no-font-support #example-element {
+  font-family: serif;
+}
+
+#feature-status {
+  padding: 8px 12px;
+  background-color: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeeba;
+  border-radius: 4px;
+  margin: 10px;
+}
