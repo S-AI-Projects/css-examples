@@ -1,0 +1,2 @@
+$ node tests/course/r56-t030.mjs
+R56-T030 deterministic browser fixtures regression passed successfully.
