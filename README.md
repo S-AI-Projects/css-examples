@@ -36,3 +36,12 @@ By participating in and contributing to our projects and discussions, you acknow
 You can communicate with the MDN Web Docs team and community using the [communication channels][].
 
 [communication channels]: https://developer.mozilla.org/en-US/docs/MDN/Community/Communication_channels
+
+## Coursework Automated Regression Checks
+
+### R56-T029: Grid Task 1 UI Regression Detection
+Run the Playwright test suite for `learn/tasks/grid/grid1.html`:
+```bash
+node tests/course/r56-t029.mjs
+```
+
