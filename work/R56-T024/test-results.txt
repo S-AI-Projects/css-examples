@@ -1,0 +1,2 @@
+$ node tests/course/r56-t024.mjs
+R56-T024 flexbox repeat initialization regression passed successfully.
