@@ -1,0 +1,35 @@
+=======================================================
+R56-T022 Automated Responsive Layout Regression Results
+=======================================================
+Command: node tests/course/r56-t022.mjs
+Exit Code: 0
+Timestamp: 2026-11-18
+
+Execution Log:
+PASS: local server started.
+PASS: 18 items rendered at 360x800.
+PASS: no page-level horizontal overflow at 360x800.
+PASS: main content container is within viewport bounds at 360x800.
+PASS: all 18 list elements remain within viewport at 360x800.
+PASS: content maintains logical vertical order at 360x800.
+PASS: CSS Painting API properties verified at 360x800.
+PASS: static demo confirmed (0 interactive controls) at 360x800.
+PASS: screenshots saved for 360x800.
+PASS: no unexpected page errors at 360x800.
+PASS: 18 items rendered at 1280x800.
+PASS: no page-level horizontal overflow at 1280x800.
+PASS: main content container is within viewport bounds at 1280x800.
+PASS: all 18 list elements remain within viewport at 1280x800.
+PASS: content maintains logical vertical order at 1280x800.
+PASS: CSS Painting API properties verified at 1280x800.
+PASS: static demo confirmed (0 interactive controls) at 1280x800.
+PASS: screenshots saved for 1280x800.
+PASS: no unexpected page errors at 1280x800.
+
+All R56-T022 checks passed.
+
+Summary:
+- Viewport 360x800: PASS (0 horizontal overflow, 0 clipped items, 0 errors)
+- Viewport 1280x800: PASS (0 horizontal overflow, 0 clipped items, 0 errors)
+- CSS Painting API Module Load (boxbg.js): PASS
+- Static demo structure preserved without manufacturing artificial defects.

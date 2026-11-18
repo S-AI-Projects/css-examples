@@ -36,3 +36,17 @@ By participating in and contributing to our projects and discussions, you acknow
 You can communicate with the MDN Web Docs team and community using the [communication channels][].
 
 [communication channels]: https://developer.mozilla.org/en-US/docs/MDN/Community/Communication_channels
+
+## R56-T022: Responsive layout regression test
+
+The responsive layout regression test for `houdini/css_painting_api/example-boxbg.html`
+checks mobile (360 × 800) and desktop (1280 × 800) viewport sizes using Playwright with Chromium.
+
+Run the test from the repository root:
+
+    node tests/course/r56-t022.mjs
+
+The test automatically launches a temporary local server, inspects element bounds, verifies
+zero horizontal overflow, confirms content visibility and vertical ordering, checks CSS Painting
+API worklet registration, and saves evidence to `work/R56-T022/`.
+
