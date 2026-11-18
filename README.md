@@ -36,3 +36,14 @@ By participating in and contributing to our projects and discussions, you acknow
 You can communicate with the MDN Web Docs team and community using the [communication channels][].
 
 [communication channels]: https://developer.mozilla.org/en-US/docs/MDN/Community/Communication_channels
+
+## R56-T023: Media Queries Fallback & Error State Regression Test
+
+The regression test for `learn/media-queries/or.html` checks media query evaluation (portrait/landscape and min-width >= 600px) and verifies fallback behavior during asset failures using Playwright with Chromium.
+
+Run the test from the repository root:
+
+    node tests/course/r56-t023.mjs
+
+The test launches a temporary local server, tests media query breakpoint colors, simulates asset failure, validates readable fallbacks and fixture restoration, and saves evidence to `work/R56-T023/`.
+
