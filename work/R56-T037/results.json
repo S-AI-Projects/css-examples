@@ -1,0 +1,53 @@
+{
+  "taskId": "R56-T037",
+  "issue": 37,
+  "entryPoint": "flexbox/use-cases/cards.html",
+  "setupCommand": "node tests/course/r56-t037.mjs",
+  "url": "http://127.0.0.1:50381/flexbox/use-cases/cards.html",
+  "timestamp": "2026-11-21T15:58:14.127Z",
+  "toolVersions": {
+    "node": "v26.13.0",
+    "playwright": "1.65.1",
+    "browser": "159.0.8154.6"
+  },
+  "baselineBehavior": "Original cards example demonstrated flex column card layout with footer alignment, but lacked an automated verified walkthrough.",
+  "changedBehavior": "Documented and executed a verified interactive walkthrough: initial footer alignment, unaligned state upon flex-grow removal, and complete restoration via reset.",
+  "walkthroughSteps": [
+    {
+      "step": 1,
+      "name": "initial_layout_observation",
+      "description": "Card 1 and Card 2 footers align at the bottom because .content has flex: 1 1 auto.",
+      "delta": 0,
+      "screenshot": "walkthrough-1-initial-aligned.png",
+      "passed": true
+    },
+    {
+      "step": 2,
+      "name": "interactive_flex_removal",
+      "description": "When flex is 0, card 1 footer follows the short text immediately and is no longer pushed to bottom.",
+      "footer1Top": 135.375,
+      "footer2Top": 311.375,
+      "screenshot": "walkthrough-2-unaligned-edited.png",
+      "passed": true
+    },
+    {
+      "step": 3,
+      "name": "reset_recovery",
+      "description": "Clicking Reset restores original CSS and footers re-align at the bottom.",
+      "delta": 0,
+      "screenshot": "walkthrough-3-restored.png",
+      "passed": true
+    }
+  ],
+  "checks": [
+    {
+      "check": "http_200",
+      "passed": true
+    },
+    {
+      "check": "no_page_errors",
+      "passed": true
+    }
+  ],
+  "status": "PASS"
+}
