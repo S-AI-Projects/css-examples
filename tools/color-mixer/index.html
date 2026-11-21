@@ -225,6 +225,17 @@
       let pickerOne, pickerTwo;
 
       function init() {
+        if (pickerOne) {
+          try {
+            pickerOne.destroyAndRemove();
+          } catch (e) {}
+        }
+        if (pickerTwo) {
+          try {
+            pickerTwo.destroyAndRemove();
+          } catch (e) {}
+        }
+
         const pickerOptions = {
           el: ".color-one",
           theme: "classic",
@@ -312,27 +323,30 @@
           colorTwo.focus();
         });
 
-        percentageOne.addEventListener("input", (e) => {
-          percentageOneLabel.innerText = e.target.value + "%";
-          updateColorMix();
-        });
-        percentageTwo.addEventListener("input", (e) => {
-          percentageTwoLabel.innerText = e.target.value + "%";
-          updateColorMix();
-        });
-        colorSpace.addEventListener("change", (e) => {
-          if (polarColorSpaces.includes(e.target.value)) {
-            interpolationMethod.style.visibility = "visible";
-            interpolationMethodLabel.style.visibility = "visible";
-          } else {
-            interpolationMethod.style.visibility = "hidden";
-            interpolationMethodLabel.style.visibility = "hidden";
-          }
-          updateColorMix();
-        });
-        interpolationMethod.addEventListener("change", (e) => {
-          updateColorMix();
-        });
+        if (!window._colorMixerListenersAttached) {
+          percentageOne.addEventListener("input", (e) => {
+            percentageOneLabel.innerText = e.target.value + "%";
+            updateColorMix();
+          });
+          percentageTwo.addEventListener("input", (e) => {
+            percentageTwoLabel.innerText = e.target.value + "%";
+            updateColorMix();
+          });
+          colorSpace.addEventListener("change", (e) => {
+            if (polarColorSpaces.includes(e.target.value)) {
+              interpolationMethod.style.visibility = "visible";
+              interpolationMethodLabel.style.visibility = "visible";
+            } else {
+              interpolationMethod.style.visibility = "hidden";
+              interpolationMethodLabel.style.visibility = "hidden";
+            }
+            updateColorMix();
+          });
+          interpolationMethod.addEventListener("change", (e) => {
+            updateColorMix();
+          });
+          window._colorMixerListenersAttached = true;
+        }
 
         interpolationMethod.style.visibility = "hidden";
         interpolationMethodLabel.style.visibility = "hidden";
@@ -380,6 +394,8 @@
         mixedOutputText.innerText = colorMixFunction;
       }
 
+      window.init = init;
+      window.updateColorMix = updateColorMix;
       init();
       updateColorMix();
     </script>
