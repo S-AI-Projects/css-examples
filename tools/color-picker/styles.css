@@ -697,6 +697,15 @@ body {
 #color-palette {
 }
 
+#color-palette:empty::before {
+  content: "No color palettes created yet. Pick a color to start.";
+  display: block;
+  padding: 14px 10px;
+  color: #888;
+  font-style: italic;
+  font-size: 13px;
+}
+
 #color-palette .container {
   width: 100%;
   height: 50px;
