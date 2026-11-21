@@ -5,4 +5,5 @@
 #example-element {
   display: block;
   color: #c13832;
+  overflow-wrap: break-word;
 }
