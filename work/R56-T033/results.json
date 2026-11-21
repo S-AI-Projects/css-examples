@@ -1,0 +1,41 @@
+{
+  "taskId": "R56-T033",
+  "issue": 33,
+  "url": "http://127.0.0.1:50301/box-alignment/overview/grid-gap.html",
+  "timestamp": "2026-11-21T15:50:19.802Z",
+  "toolVersions": {
+    "node": "v26.13.0",
+    "playwright": "1.65.1",
+    "browser": "159.0.8154.6"
+  },
+  "baselineBehavior": "Clearing the HTML textarea left an empty white section with no user feedback or fallback message.",
+  "changedBehavior": "Displays a helpful empty-state fallback message with role='status' when HTML content is empty, and cleanly recovers upon valid input or Reset.",
+  "checks": [
+    {
+      "check": "http_200",
+      "passed": true
+    },
+    {
+      "check": "initial_render_6_items",
+      "passed": true
+    },
+    {
+      "check": "empty_state_displayed",
+      "passed": true,
+      "emptyText": "No HTML content to preview. Enter HTML in the code editor or click Reset."
+    },
+    {
+      "check": "recovery_via_reset",
+      "passed": true
+    },
+    {
+      "check": "recovery_via_valid_input",
+      "passed": true
+    },
+    {
+      "check": "no_page_errors",
+      "passed": true
+    }
+  ],
+  "status": "PASS"
+}

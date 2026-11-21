@@ -131,7 +131,13 @@
 
     function fillCode() {
       editable.innerHTML = textareaCSS.value;
-      section.innerHTML = textareaHTML.value;
+      var trimmed = textareaHTML.value.trim();
+      if (!trimmed) {
+        section.innerHTML =
+          '<div class="empty-state" role="status" style="padding: 20px; color: #555; font-style: italic; text-align: center;">No HTML content to preview. Enter HTML in the code editor or click Reset.</div>';
+      } else {
+        section.innerHTML = textareaHTML.value;
+      }
     }
 
     reset.addEventListener("click", function () {
