@@ -1,0 +1,52 @@
+{
+  "taskId": "R56-T031",
+  "issue": 31,
+  "url": "http://127.0.0.1:50035/editable-samples-2/pages/font/index.html",
+  "timestamp": "2026-11-21T15:16:32.910Z",
+  "toolVersions": {
+    "node": "v26.13.0",
+    "playwright": "1.65.1",
+    "browser": "159.0.8154.6"
+  },
+  "baselineBehavior": "Original editable.js attached click listeners only; choices lacked tabindex, keyboard focus, and Enter/Space activation.",
+  "changedBehavior": "Added tabindex=0, role=button, Enter/Space activation, and visible focus outline styles. Keyboard navigation and activation fully functional.",
+  "checks": [
+    {
+      "check": "http_200",
+      "passed": true
+    },
+    {
+      "check": "no_positive_tabindex",
+      "passed": true
+    },
+    {
+      "check": "choices_keyboard_accessible",
+      "passed": true
+    },
+    {
+      "check": "focus_visible",
+      "passed": true,
+      "focusOutline": {
+        "outlineStyle": "solid",
+        "outlineWidth": "2px"
+      }
+    },
+    {
+      "check": "keyboard_activation_enter",
+      "passed": true
+    },
+    {
+      "check": "keyboard_activation_space",
+      "passed": true
+    },
+    {
+      "check": "reset_button_keyboard",
+      "passed": true
+    },
+    {
+      "check": "no_page_errors",
+      "passed": true
+    }
+  ],
+  "status": "PASS"
+}
