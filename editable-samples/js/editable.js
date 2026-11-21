@@ -9,6 +9,15 @@ var cmOptions = {
   theme: "eclipse",
   lineNumbers: true,
   showCursorWhenSelecting: true,
+  extraKeys: {
+    Tab: function (cm) {
+      if (reset && !reset.classList.contains("hidden")) {
+        reset.focus();
+      } else {
+        cm.getInputField().blur();
+      }
+    },
+  },
 };
 
 var cmEditor = CodeMirror.fromTextArea(editorContent, cmOptions);
