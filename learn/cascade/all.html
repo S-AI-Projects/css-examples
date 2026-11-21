@@ -5,7 +5,28 @@
     <meta name="viewport" content="width=device-width" />
     <title>all</title>
     <link rel="stylesheet" href="../styles.css" />
-    <style></style>
+    <style>
+      #support-notice {
+        display: none;
+        background: #fff3cd;
+        color: #856404;
+        border: 1px solid #ffeeba;
+        padding: 8px 12px;
+        margin: 10px 0;
+        border-radius: 4px;
+        font-size: 0.9em;
+      }
+
+      @supports not (all: unset) {
+        #support-notice {
+          display: block;
+        }
+      }
+
+      .unsupported-feature #support-notice {
+        display: block;
+      }
+    </style>
 
     <style class="editable">
       blockquote {
@@ -20,6 +41,9 @@
   </head>
 
   <body>
+    <div id="support-notice">
+      Note: The CSS <code>all</code> property is not supported in this browser.
+    </div>
     <section class="preview">
       <blockquote>
         <p>This blockquote is styled</p>
@@ -55,5 +79,10 @@ blockquote {
       <input id="reset" type="button" value="Reset" />
     </div>
   </body>
+  <script>
+    if (!window.CSS || !CSS.supports || !CSS.supports("all", "unset")) {
+      document.body.classList.add("unsupported-feature");
+    }
+  </script>
   <script src="../playable.js"></script>
 </html>
