@@ -1,0 +1,38 @@
+{
+  "taskId": "R56-T040",
+  "issue": 40,
+  "url": "http://127.0.0.1:50584/editable-samples-2/pages/font/index.html",
+  "timestamp": "2026-11-21T17:00:03.847Z",
+  "toolVersions": {
+    "node": "v26.13.0",
+    "playwright": "1.65.1",
+    "browser": "159.0.8154.6"
+  },
+  "baselineBehavior": "Original index.html had duplicate class attributes on reset buttons, and lacked regression tests distinguishing broken choice click handlers from correct behavior.",
+  "changedBehavior": "Corrected duplicate HTML class attributes and added word wrapping. Implemented regression test distinguishing unmutated working state from a deliberate click-binding mutation.",
+  "deliberateMutation": {
+    "description": "Deliberately suppressed choice click event dispatch in a temporary test context.",
+    "intendedFailureReason": "Click event binding broken: #example-element style does not update upon choice click.",
+    "mutationCaught": true
+  },
+  "checks": [
+    {
+      "check": "unmutated_page_passes",
+      "passed": true
+    },
+    {
+      "check": "deliberate_mutation_caught",
+      "passed": true,
+      "observedStyle": "font: 1.2em \"Open Sans\", sans-serif;"
+    },
+    {
+      "check": "final_application_clean",
+      "passed": true
+    },
+    {
+      "check": "no_page_errors",
+      "passed": true
+    }
+  ],
+  "status": "PASS"
+}
