@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width" />
     <title>Demonstration of responsive typography with vw</title>
     <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
       html {
         font-size: 1em;
       }
@@ -17,6 +23,7 @@
         margin: 20px;
         padding: 0;
         background-color: #eee;
+        overflow-wrap: break-word;
       }
       .wrapper {
         max-width: 960px;
