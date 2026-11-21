@@ -70,12 +70,33 @@ function copyTextOnly(e) {
 document.addEventListener("cut", copyTextOnly);
 document.addEventListener("copy", copyTextOnly);
 
+// Ensure keyboard focus visibility without modifying static CSS files
+if (!document.getElementById("editable-keyboard-focus-style")) {
+  var focusStyle = document.createElement("style");
+  focusStyle.id = "editable-keyboard-focus-style";
+  focusStyle.textContent =
+    ".example-choice:focus-visible { outline: 2px solid #005a9c; outline-offset: 2px; } " +
+    ".reset:focus-visible { outline: 2px solid #005a9c; } " +
+    "[contenteditable]:focus-visible { outline: 2px solid #005a9c !important; }";
+  document.head.appendChild(focusStyle);
+}
+
 for (exampleChoice of exampleChoices) {
   originalChoices.push(exampleChoice.textContent);
   if (exampleChoice.getAttribute("initial-choice")) {
     initialChoice = indexOf(exampleChoices, exampleChoice);
   }
+  exampleChoice.setAttribute("tabindex", "0");
+  exampleChoice.setAttribute("role", "button");
   exampleChoice.addEventListener("click", onChoose);
+  exampleChoice.addEventListener("keydown", function (e) {
+    if (e.key === "Enter" || e.key === " ") {
+      if (e.target === e.currentTarget) {
+        e.preventDefault();
+        onChoose({ currentTarget: e.currentTarget });
+      }
+    }
+  });
   exampleChoice.firstChild.addEventListener("keyup", onEdit);
   exampleChoice.querySelector(".reset").addEventListener("click", function (e) {
     var choice = e.target.parentNode;
