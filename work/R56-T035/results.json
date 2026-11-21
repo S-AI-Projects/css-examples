@@ -1,0 +1,84 @@
+{
+  "taskId": "R56-T035",
+  "issue": 35,
+  "url": "http://127.0.0.1:50339/flexbox/ratios/flex-grow.html",
+  "timestamp": "2026-11-21T15:53:55.818Z",
+  "toolVersions": {
+    "node": "v26.13.0",
+    "playwright": "1.65.1",
+    "browser": "159.0.8154.6"
+  },
+  "baselineBehavior": "Original example lacked explicit viewport locking and universal box-sizing, risking layout nondeterminism across varied client environments.",
+  "changedBehavior": "Locked viewport dimensions and added universal border-box sizing. Verified that two independent fresh browser contexts produce bit-identical asserted DOM state without public API dependencies.",
+  "context1State": {
+    "boxWidth": "500px",
+    "boxDisplay": "flex",
+    "itemCount": 3,
+    "items": [
+      {
+        "text": "One",
+        "width": "165.328px",
+        "flexGrow": "1",
+        "flexShrink": "1",
+        "flexBasis": "0px"
+      },
+      {
+        "text": "Two",
+        "width": "165.344px",
+        "flexGrow": "1",
+        "flexShrink": "1",
+        "flexBasis": "0px"
+      },
+      {
+        "text": "Three has more content",
+        "width": "165.328px",
+        "flexGrow": "1",
+        "flexShrink": "1",
+        "flexBasis": "0px"
+      }
+    ]
+  },
+  "context2State": {
+    "boxWidth": "500px",
+    "boxDisplay": "flex",
+    "itemCount": 3,
+    "items": [
+      {
+        "text": "One",
+        "width": "165.328px",
+        "flexGrow": "1",
+        "flexShrink": "1",
+        "flexBasis": "0px"
+      },
+      {
+        "text": "Two",
+        "width": "165.344px",
+        "flexGrow": "1",
+        "flexShrink": "1",
+        "flexBasis": "0px"
+      },
+      {
+        "text": "Three has more content",
+        "width": "165.328px",
+        "flexGrow": "1",
+        "flexShrink": "1",
+        "flexBasis": "0px"
+      }
+    ]
+  },
+  "checks": [
+    {
+      "check": "contexts_identical_state",
+      "passed": true
+    },
+    {
+      "check": "flexbox_ratios_verified",
+      "passed": true
+    },
+    {
+      "check": "no_page_errors",
+      "passed": true
+    }
+  ],
+  "status": "PASS"
+}
