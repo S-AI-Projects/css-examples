@@ -84,6 +84,33 @@
     <div class="playable-buttons">
       <input id="reset" type="button" value="Reset" />
     </div>
+
+    <div id="companion-text-container" style="margin: 10px 0; padding: 10px; border: 1px dashed #999; border-radius: 4px;">
+      <label for="caption-input">Grid Item Label: </label>
+      <input id="caption-input" type="text" value="Sample Item" />
+      <div id="caption-display" style="font-weight: bold; margin-top: 6px;"></div>
+    </div>
   </body>
   <script src="../playable.js"></script>
+  <script>
+    (function () {
+      var input = document.getElementById("caption-input");
+      var display = document.getElementById("caption-display");
+      var resetBtn = document.getElementById("reset");
+      if (input && display) {
+        function renderText() {
+          display.textContent = input.value;
+        }
+        input.addEventListener("input", renderText);
+        renderText();
+
+        if (resetBtn) {
+          resetBtn.addEventListener("click", function () {
+            input.value = "Sample Item";
+            renderText();
+          });
+        }
+      }
+    })();
+  </script>
 </html>
