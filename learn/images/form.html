@@ -16,6 +16,16 @@
       .buttons {
         justify-content: center;
       }
+
+      @media (max-width: 480px) {
+        form > div {
+          flex-direction: column;
+        }
+        label {
+          width: 100%;
+          margin-bottom: 0.25em;
+        }
+      }
     </style>
 
     <style class="editable">

@@ -1,0 +1,22 @@
+{
+  "task": "R56-T012",
+  "student": "Abhishek Kumar",
+  "target": "learn/images/form.html",
+  "timestamp": "2026-11-21T23:16:00+05:30",
+  "status": "PASS",
+  "viewports": [
+    {
+      "name": "Mobile (360x800)",
+      "horizontalOverflow": false,
+      "controlsUnclipped": true,
+      "orderPreserved": true
+    },
+    {
+      "name": "Desktop (1280x800)",
+      "horizontalOverflow": false,
+      "controlsUnclipped": true,
+      "orderPreserved": true
+    }
+  ],
+  "errors": []
+}
