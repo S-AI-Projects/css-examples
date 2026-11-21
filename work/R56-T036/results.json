@@ -1,0 +1,39 @@
+{
+  "taskId": "R56-T036",
+  "issue": 36,
+  "url": "http://127.0.0.1:50358/font-features/font-kerning.html",
+  "timestamp": "2026-11-21T15:56:08.134Z",
+  "toolVersions": {
+    "node": "v26.13.0",
+    "playwright": "1.65.1",
+    "browser": "159.0.8154.6"
+  },
+  "baselineBehavior": "Original example assumed native font-kerning support without checking, leaving unsupported environments without fallback or disabled controls.",
+  "changedBehavior": "Added CSS @supports fallback and JS feature detection. In supported browsers, controls remain active; in stubbed unsupported environments, controls are disabled and informative fallback text is displayed.",
+  "checks": [
+    {
+      "check": "supported_feature_path",
+      "passed": true,
+      "supportedState": {
+        "disabled": false,
+        "checked": true,
+        "fallbackDisplay": "none"
+      }
+    },
+    {
+      "check": "unsupported_feature_fallback_path",
+      "passed": true,
+      "unsupportedState": {
+        "disabled": true,
+        "fallbackDisplay": "block",
+        "fallbackText": "Notice: font-kerning is not supported in this browser environment.",
+        "labelText": "Kerning unsupported"
+      }
+    },
+    {
+      "check": "no_page_errors",
+      "passed": true
+    }
+  ],
+  "status": "PASS"
+}
