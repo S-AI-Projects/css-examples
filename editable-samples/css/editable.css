@@ -35,6 +35,15 @@ body {
   display: none;
 }
 
+#editor > input:focus-visible {
+  outline: 2px solid #005a9c;
+  outline-offset: 2px;
+}
+
+.CodeMirror-focused {
+  outline: 2px solid #005a9c;
+}
+
 #output {
   width: 100%;
   height: 200px;
