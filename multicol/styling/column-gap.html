@@ -105,6 +105,11 @@
   <p>Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter purslane kale. Celery potato scallion desert raisin horseradish spinach carrot soko.</p>
 </div></textarea
     >
+    <div class="text-companion" style="margin-top: 15px; width: 90%; max-width: 700px;">
+      <label for="companion-text-input" style="display: block; font-weight: bold; margin-bottom: 5px;">Custom Column Text (rendered safely as text):</label>
+      <input type="text" id="companion-text-input" placeholder="Enter text to render safely in columns..." style="width: 100%; padding: 8px; margin-bottom: 8px; border: 1px solid #ccc; border-radius: 4px;" />
+      <div id="companion-text-output" class="container" style="min-height: 40px; padding: 10px; background: #fff; border: 1px dashed #558abb;"></div>
+    </div>
     <div class="playable-buttons">
       <input id="reset" type="button" value="Reset" />
     </div>
@@ -123,9 +128,22 @@
       section.innerHTML = textareaHTML.value;
     }
 
+    var companionInput = document.getElementById("companion-text-input");
+    var companionOutput = document.getElementById("companion-text-output");
+
+    if (companionInput && companionOutput) {
+      companionInput.addEventListener("input", function () {
+        companionOutput.textContent = companionInput.value;
+      });
+    }
+
     reset.addEventListener("click", function () {
       textareaHTML.value = htmlCode;
       textareaCSS.value = cssCode;
+      if (companionInput && companionOutput) {
+        companionInput.value = "";
+        companionOutput.textContent = "";
+      }
       fillCode();
     });
 

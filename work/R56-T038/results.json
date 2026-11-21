@@ -1,0 +1,52 @@
+{
+  "taskId": "R56-T038",
+  "issue": 38,
+  "url": "http://127.0.0.1:50396/multicol/styling/column-gap.html",
+  "timestamp": "2026-11-21T16:00:08.513Z",
+  "toolVersions": {
+    "node": "v26.13.0",
+    "playwright": "1.65.1",
+    "browser": "159.0.8154.6"
+  },
+  "baselineBehavior": "Original column-gap example had an HTML textarea with no dedicated text-only rendering input to verify safe text handling.",
+  "changedBehavior": "Added an isolated companion text-rendering example using textContent. HTML injection payloads render strictly as plain text with 0 injected elements and no handler execution.",
+  "injectionPayload": "<img src=\"x\" onerror=\"window.__xssFired=true\">",
+  "checks": [
+    {
+      "check": "http_200",
+      "passed": true
+    },
+    {
+      "check": "text_rendered_safely_as_text",
+      "passed": true,
+      "checkResults": {
+        "textContent": "<img src=\"x\" onerror=\"window.__xssFired=true\">",
+        "imgCount": 0,
+        "childElementCount": 0,
+        "xssExecuted": false
+      }
+    },
+    {
+      "check": "rich_html_separate_contract_preserved",
+      "passed": true,
+      "richContractResults": {
+        "hasStrong": true,
+        "strongText": "Bold column text"
+      }
+    },
+    {
+      "check": "reset_recovery",
+      "passed": true,
+      "postResetState": {
+        "companionVal": "",
+        "companionText": "",
+        "paragraphCount": 3
+      }
+    },
+    {
+      "check": "no_page_errors",
+      "passed": true
+    }
+  ],
+  "status": "PASS"
+}
