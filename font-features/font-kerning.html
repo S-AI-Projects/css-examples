@@ -100,6 +100,29 @@
         font-size: 4rem;
         margin: 1.5rem 0;
       }
+
+      .feature-fallback {
+        display: none;
+        color: #721c24;
+        background-color: #f8d7da;
+        border: 1px solid #f5c6cb;
+        padding: 6px 10px;
+        margin: 5px 0;
+        border-radius: 4px;
+        font-size: 0.9rem;
+      }
+
+      @supports not (font-kerning: normal) {
+        .fallback1 {
+          display: block;
+        }
+      }
+
+      @supports not (font-feature-settings: "kern" 1) {
+        .fallback2 {
+          display: block;
+        }
+      }
     </style>
     <style class="editable1">
       /* kerning: auto|normal|none */
@@ -144,6 +167,7 @@
 </div>
 </textarea
         >
+        <p class="feature-fallback fallback1">Notice: font-kerning is not supported in this browser environment.</p>
         <input
           type="checkbox"
           name="demo1_control"
@@ -172,6 +196,7 @@
   <p>Puffy Pangolins</p>
 </div></textarea
         >
+        <p class="feature-fallback fallback2">Notice: font-feature-settings is not supported in this browser environment.</p>
         <input
           type="checkbox"
           name="demo2_control"
@@ -238,10 +263,37 @@
       }
     });
 
+    function checkFeatureSupport() {
+      if (typeof CSS !== "undefined" && typeof CSS.supports === "function") {
+        if (!CSS.supports("font-kerning", "normal")) {
+          var fb1 = document.querySelector(".fallback1");
+          if (fb1) fb1.style.display = "block";
+          if (demo1_active) {
+            demo1_active.disabled = true;
+            var lbl1 = document.querySelector("label[for='demo1_control']");
+            if (lbl1) lbl1.textContent = "Kerning unsupported";
+          }
+        }
+        if (!CSS.supports("font-feature-settings", "'kern' 1") && !CSS.supports("font-feature-settings", '"kern" 1')) {
+          var fb2 = document.querySelector(".fallback2");
+          if (fb2) fb2.style.display = "block";
+          if (demo2_active) {
+            demo2_active.disabled = true;
+            var lbl2 = document.querySelector("label[for='demo2_control']");
+            if (lbl2) lbl2.textContent = "Kerning unsupported";
+          }
+        }
+      }
+    }
+
     textareaHTML1.addEventListener("input", fillCode);
     textareaCSS1.addEventListener("input", fillCode);
     textareaHTML2.addEventListener("input", fillCode);
     textareaCSS2.addEventListener("input", fillCode);
-    window.addEventListener("load", fillCode);
+    window.addEventListener("load", function () {
+      fillCode();
+      checkFeatureSupport();
+    });
+    checkFeatureSupport();
   </script>
 </html>
