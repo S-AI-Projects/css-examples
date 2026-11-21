@@ -55,5 +55,21 @@ blockquote {
       <input id="reset" type="button" value="Reset" />
     </div>
   </body>
+  <script>
+    // Deduplication guard for repeated script initialization
+    function cleanDuplicateEditorHeadings() {
+      const headings = Array.from(document.querySelectorAll("h4")).filter(
+        (h) => h.textContent.trim() === "Interactive editor"
+      );
+      while (headings.length > 1) {
+        headings.pop().remove();
+      }
+    }
+    const headingObserver = new MutationObserver(cleanDuplicateEditorHeadings);
+    headingObserver.observe(document.body, { childList: true });
+    window.__pageCleanup = function () {
+      headingObserver.disconnect();
+    };
+  </script>
   <script src="../playable.js"></script>
 </html>
