@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Box Shadow Generator - Safe Text Rendering Companion</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .companion-box {
+        margin: 20px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        box-shadow: 2px 2px 5px rgb(0 0 0 / 0.3);
+        background: #fff;
+      }
+      .text-output {
+        font-family: monospace;
+        background: #f4f4f4;
+        padding: 10px;
+        margin-top: 10px;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="layer_manager">
+        <div id="stack_container"></div>
+      </div>
+      <div id="preview_zone">
+        <div class="companion-box">
+          <label for="fixture_input">Fixture Text Input:</label>
+          <input type="text" id="fixture_input" placeholder="Enter fixture text..." />
+          <div id="fixture_display" class="text-output"></div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const input = document.getElementById("fixture_input");
+      const display = document.getElementById("fixture_display");
+      input.addEventListener("input", function () {
+        // Safe text rendering: ensures user/fixture text strictly renders as plain text
+        display.textContent = input.value;
+      });
+    </script>
+  </body>
+</html>
