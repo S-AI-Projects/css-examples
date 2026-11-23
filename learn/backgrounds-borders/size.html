@@ -15,6 +15,8 @@
         padding: 0.5em;
         border: 1px solid #ccc;
         margin: 20px;
+        /* Base fallback color for browsers without background-size */
+        background-color: #e2e8f0;
       }
     </style>
 
@@ -24,6 +26,20 @@
         background-repeat: no-repeat;
         background-size: 100px 10em;
       }
+
+      @supports not (background-size: cover) {
+        .box {
+          background-color: #cbd5e1;
+        }
+
+        .box::after {
+          content: "Your browser does not support background-size. The background image cannot be resized.";
+          display: block;
+          padding: 1em;
+          color: #334155;
+          font-style: italic;
+        }
+      }
     </style>
   </head>
 
@@ -32,11 +48,25 @@
       <div class="box"></div>
     </section>
 
-    <textarea class="playable playable-css" style="height: 120px">
+    <textarea class="playable playable-css" style="height: 220px">
 .box {
   background-image: url(balloons.jpg);
   background-repeat: no-repeat;
   background-size: 100px 10em;
+}
+
+@supports not (background-size: cover) {
+  .box {
+    background-color: #cbd5e1;
+  }
+
+  .box::after {
+    content: "Your browser does not support background-size.";
+    display: block;
+    padding: 1em;
+    color: #334155;
+    font-style: italic;
+  }
 }</textarea
     >
 
