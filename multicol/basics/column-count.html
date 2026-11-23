@@ -121,14 +121,28 @@
       section.innerHTML = textareaHTML.value;
     }
 
-    reset.addEventListener("click", function () {
-      textareaHTML.value = htmlCode;
-      textareaCSS.value = cssCode;
-      fillCode();
-    });
+    function initDemo() {
+      if (window.__demo_initialized) {
+        fillCode();
+        return;
+      }
+      window.__demo_initialized = true;
 
-    textareaHTML.addEventListener("input", fillCode);
-    textareaCSS.addEventListener("input", fillCode);
-    window.addEventListener("load", fillCode);
+      reset.addEventListener("click", function () {
+        textareaHTML.value = htmlCode;
+        textareaCSS.value = cssCode;
+        fillCode();
+      });
+
+      textareaHTML.addEventListener("input", fillCode);
+      textareaCSS.addEventListener("input", fillCode);
+      fillCode();
+    }
+
+    window.initDemo = initDemo;
+    window.addEventListener("load", initDemo);
+    if (document.readyState === "complete" || document.readyState === "interactive") {
+      initDemo();
+    }
   </script>
 </html>
